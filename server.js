@@ -1,3 +1,4 @@
+
 require("dotenv").config();
 
 const express = require("express");
@@ -21,15 +22,20 @@ app.use("/api/products", productRoutes);
 app.use(notFound);
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 5000;
+// Start local server only when running directly
+if (require.main === module) {
+  const PORT = process.env.PORT || 5000;
 
-connectDB()
-  .then(() => {
-    app.listen(PORT, () => {
-      console.log(`Server running on http://localhost:${PORT}`);
+  connectDB()
+    .then(() => {
+      app.listen(PORT, () => {
+        console.log(`Server running on http://localhost:${PORT}`);
+      });
+    })
+    .catch((error) => {
+      console.error("Unable to start server:", error.message);
+      process.exit(1);
     });
-  })
-  .catch((error) => {
-    console.error("Unable to start server:", error.message);
-    process.exit(1);
-  });
+}
+
+module.exports = app;
