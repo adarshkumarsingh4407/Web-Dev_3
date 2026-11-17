@@ -11,69 +11,36 @@
 - Category-wise inventory summary using aggregation
 - Centralized error handling
 
-## Project Setup
-
-```bash
-npm install
-```
-
-Create a `.env` file:
-
-```env
-PORT=5000
-MONGODB_URI=mongodb://127.0.0.1:27017/inventory_management
-NODE_ENV=development
-```
-
-Start the server:
-
-```bash
-npm run dev
-```
-
 **Server:** `http://localhost:5000`
-
-## API Endpoints
-
-| Method | Endpoint | Description |
-|---|---|---|
-| POST | `/api/products` | Create product |
-| GET | `/api/products` | Get all products |
-| GET | `/api/products/:id` | Get product by ID |
-| PUT | `/api/products/:id` | Update product |
-| DELETE | `/api/products/:id` | Delete product |
-| PATCH | `/api/products/:id/stock` | Adjust stock |
-| GET | `/api/products/low-stock` | Low-stock report |
-| GET | `/api/products/summary` | Category summary |
 
 ## Postman API Testing
 
 ### 1. Create Product
-![Create Product](/screenshots/screenshots01-create-product.png)
+![Create Product](/screenshots/ss1.png)
 
 ### 2. Get All Products
-![Get All Products](/screenshots/screenshots02-get-all-products.png)
+![Get All Products](/screenshots/ss2.png)
 
 ### 3. Get Product by ID
-![Get Product by ID](/screenshots/screenshots03-get-product-by-id.png)
+![Get Product by ID](/screenshots/ss3.png)
 
 ### 4. Update Product
-![Update Product](/screenshots/screenshots04-update-product.png)
+![Update Product](/screenshots/ss4.png)
 
 ### 5. Stock Adjustment
-![Stock Adjustment](/screenshots/screenshots05-stock-adjustment.png)
+![Stock Adjustment](/screenshots/ss5.png)
 
 ### 6. Low Stock Report
-![Low Stock](/screenshots/sscreenshots06-low-stock.png)
+![Low Stock](/screenshots/ss6.png)
 
 ### 7. Category-wise Inventory Summary
-![Category Summary](/screenshots/screenshots07-category-summary.png)
+![Category Summary](/screenshots/ss7.png)
 
 ### 8. Filtering, Sorting and Pagination
-![Filtering and Pagination](/screenshots/screenshots08-filter-sort-pagination.png)
+![Filtering and Pagination](/screenshots/ss8.png)
 
 ### 9. Delete Product
-![Delete Product](/screenshots/screenshots09-delete-product.png)
+![Delete Product](/screenshots/ss9.png)
 
 ## Conclusion
 
